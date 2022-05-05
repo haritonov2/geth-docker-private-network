@@ -1,0 +1,1238 @@
+{
+  "absolutePath": "sample-9.sol",
+  "exportedSymbols":
+  {
+    "Proof":
+    [
+      85
+    ]
+  },
+  "id": 86,
+  "license": "GPL-3.0",
+  "nodeType": "SourceUnit",
+  "nodes":
+  [
+    {
+      "id": 1,
+      "literals":
+      [
+        "solidity",
+        "^",
+        "0.8",
+        ".13"
+      ],
+      "nodeType": "PragmaDirective",
+      "src": "36:24:0"
+    },
+    {
+      "abstract": false,
+      "baseContracts": [],
+      "canonicalName": "Proof",
+      "contractDependencies": [],
+      "contractKind": "contract",
+      "fullyImplemented": true,
+      "id": 85,
+      "linearizedBaseContracts":
+      [
+        85
+      ],
+      "name": "Proof",
+      "nameLocation": "71:5:0",
+      "nodeType": "ContractDefinition",
+      "nodes":
+      [
+        {
+          "canonicalName": "Proof.FileDetails",
+          "id": 6,
+          "members":
+          [
+            {
+              "constant": false,
+              "id": 3,
+              "mutability": "mutable",
+              "name": "timestamp",
+              "nameLocation": "117:9:0",
+              "nodeType": "VariableDeclaration",
+              "scope": 6,
+              "src": "112:14:0",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions":
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName":
+              {
+                "id": 2,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "112:4:0",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 5,
+              "mutability": "mutable",
+              "name": "owner",
+              "nameLocation": "143:5:0",
+              "nodeType": "VariableDeclaration",
+              "scope": 6,
+              "src": "136:12:0",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions":
+              {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              },
+              "typeName":
+              {
+                "id": 4,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "136:6:0",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "name": "FileDetails",
+          "nameLocation": "90:11:0",
+          "nodeType": "StructDefinition",
+          "scope": 85,
+          "src": "83:72:0",
+          "visibility": "public"
+        },
+        {
+          "constant": false,
+          "id": 11,
+          "mutability": "mutable",
+          "name": "files",
+          "nameLocation": "193:5:0",
+          "nodeType": "VariableDeclaration",
+          "scope": 85,
+          "src": "161:37:0",
+          "stateVariable": true,
+          "storageLocation": "default",
+          "typeDescriptions":
+          {
+            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+            "typeString": "mapping(string => struct Proof.FileDetails)"
+          },
+          "typeName":
+          {
+            "id": 10,
+            "keyType":
+            {
+              "id": 7,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "170:6:0",
+              "typeDescriptions":
+              {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "nodeType": "Mapping",
+            "src": "161:31:0",
+            "typeDescriptions":
+            {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+              "typeString": "mapping(string => struct Proof.FileDetails)"
+            },
+            "valueType":
+            {
+              "id": 9,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode":
+              {
+                "id": 8,
+                "name": "FileDetails",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 6,
+                "src": "180:11:0"
+              },
+              "referencedDeclaration": 6,
+              "src": "180:11:0",
+              "typeDescriptions":
+              {
+                "typeIdentifier": "t_struct$_FileDetails_$6_storage_ptr",
+                "typeString": "struct Proof.FileDetails"
+              }
+            }
+          },
+          "visibility": "internal"
+        },
+        {
+          "anonymous": false,
+          "eventSelector": "399b5bf0e6a3d41b78ee0de7ddd8fe7f6526dd354325d01b3a8da4111e862b97",
+          "id": 21,
+          "name": "logFileAddressStatus",
+          "nameLocation": "211:20:0",
+          "nodeType": "EventDefinition",
+          "parameters":
+          {
+            "id": 20,
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "constant": false,
+                "id": 13,
+                "indexed": false,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "237:6:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "232:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName":
+                {
+                  "id": 12,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "232:4:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 15,
+                "indexed": false,
+                "mutability": "mutable",
+                "name": "timestamp",
+                "nameLocation": "250:9:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "245:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName":
+                {
+                  "id": 14,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:4:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 17,
+                "indexed": false,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "268:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "261:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 16,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "261:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 19,
+                "indexed": false,
+                "mutability": "mutable",
+                "name": "fileHash",
+                "nameLocation": "282:8:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "275:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 18,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "275:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "src": "231:60:0"
+          },
+          "src": "205:87:0"
+        },
+        {
+          "body":
+          {
+            "id": 63,
+            "nodeType": "Block",
+            "src": "434:306:0",
+            "statements":
+            [
+              {
+                "condition":
+                {
+                  "commonType":
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "id": 33,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "leftExpression":
+                  {
+                    "expression":
+                    {
+                      "baseExpression":
+                      {
+                        "id": 28,
+                        "name": "files",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "448:5:0",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+                          "typeString": "mapping(string memory => struct Proof.FileDetails storage ref)"
+                        }
+                      },
+                      "id": 30,
+                      "indexExpression":
+                      {
+                        "id": 29,
+                        "name": "fileHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "454:8:0",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "448:15:0",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_struct$_FileDetails_$6_storage",
+                        "typeString": "struct Proof.FileDetails storage ref"
+                      }
+                    },
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3,
+                    "src": "448:25:0",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "==",
+                  "rightExpression":
+                  {
+                    "hexValue": "30",
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "477:1:0",
+                    "typeDescriptions":
+                    {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "src": "448:30:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "falseBody":
+                {
+                  "id": 61,
+                  "nodeType": "Block",
+                  "src": "644:90:0",
+                  "statements":
+                  [
+                    {
+                      "eventCall":
+                      {
+                        "arguments":
+                        [
+                          {
+                            "hexValue": "66616c7365",
+                            "id": 54,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "bool",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "684:5:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "value": "false"
+                          },
+                          {
+                            "expression":
+                            {
+                              "id": 55,
+                              "name": "block",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -4,
+                              "src": "691:5:0",
+                              "typeDescriptions":
+                              {
+                                "typeIdentifier": "t_magic_block",
+                                "typeString": "block"
+                              }
+                            },
+                            "id": 56,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "timestamp",
+                            "nodeType": "MemberAccess",
+                            "src": "691:15:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 57,
+                            "name": "owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 23,
+                            "src": "707:5:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 58,
+                            "name": "fileHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 25,
+                            "src": "714:8:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression":
+                        {
+                          "argumentTypes":
+                          [
+                            {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 53,
+                          "name": "logFileAddressStatus",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "663:20:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_function_event_nonpayable$_t_bool_$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                            "typeString": "function (bool,uint256,string memory,string memory)"
+                          }
+                        },
+                        "id": 59,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "663:60:0",
+                        "tryCall": false,
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_tuple$__$",
+                          "typeString": "tuple()"
+                        }
+                      },
+                      "id": 60,
+                      "nodeType": "EmitStatement",
+                      "src": "658:65:0"
+                    }
+                  ]
+                },
+                "id": 62,
+                "nodeType": "IfStatement",
+                "src": "444:290:0",
+                "trueBody":
+                {
+                  "id": 52,
+                  "nodeType": "Block",
+                  "src": "480:158:0",
+                  "statements":
+                  [
+                    {
+                      "expression":
+                      {
+                        "id": 42,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftHandSide":
+                        {
+                          "baseExpression":
+                          {
+                            "id": 34,
+                            "name": "files",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11,
+                            "src": "494:5:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+                              "typeString": "mapping(string memory => struct Proof.FileDetails storage ref)"
+                            }
+                          },
+                          "id": 36,
+                          "indexExpression":
+                          {
+                            "id": 35,
+                            "name": "fileHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 25,
+                            "src": "500:8:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": true,
+                          "nodeType": "IndexAccess",
+                          "src": "494:15:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_struct$_FileDetails_$6_storage",
+                            "typeString": "struct Proof.FileDetails storage ref"
+                          }
+                        },
+                        "nodeType": "Assignment",
+                        "operator": "=",
+                        "rightHandSide":
+                        {
+                          "arguments":
+                          [
+                            {
+                              "expression":
+                              {
+                                "id": 38,
+                                "name": "block",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -4,
+                                "src": "524:5:0",
+                                "typeDescriptions":
+                                {
+                                  "typeIdentifier": "t_magic_block",
+                                  "typeString": "block"
+                                }
+                              },
+                              "id": 39,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "timestamp",
+                              "nodeType": "MemberAccess",
+                              "src": "524:15:0",
+                              "typeDescriptions":
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            {
+                              "id": 40,
+                              "name": "owner",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 23,
+                              "src": "541:5:0",
+                              "typeDescriptions":
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            }
+                          ],
+                          "expression":
+                          {
+                            "argumentTypes":
+                            [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            ],
+                            "id": 37,
+                            "name": "FileDetails",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6,
+                            "src": "512:11:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_type$_t_struct$_FileDetails_$6_storage_ptr_$",
+                              "typeString": "type(struct Proof.FileDetails storage pointer)"
+                            }
+                          },
+                          "id": 41,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "512:35:0",
+                          "tryCall": false,
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_struct$_FileDetails_$6_memory_ptr",
+                            "typeString": "struct Proof.FileDetails memory"
+                          }
+                        },
+                        "src": "494:53:0",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_struct$_FileDetails_$6_storage",
+                          "typeString": "struct Proof.FileDetails storage ref"
+                        }
+                      },
+                      "id": 43,
+                      "nodeType": "ExpressionStatement",
+                      "src": "494:53:0"
+                    },
+                    {
+                      "eventCall":
+                      {
+                        "arguments":
+                        [
+                          {
+                            "hexValue": "74727565",
+                            "id": 45,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "bool",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "588:4:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "value": "true"
+                          },
+                          {
+                            "expression":
+                            {
+                              "id": 46,
+                              "name": "block",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -4,
+                              "src": "594:5:0",
+                              "typeDescriptions":
+                              {
+                                "typeIdentifier": "t_magic_block",
+                                "typeString": "block"
+                              }
+                            },
+                            "id": 47,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "timestamp",
+                            "nodeType": "MemberAccess",
+                            "src": "594:15:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 48,
+                            "name": "owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 23,
+                            "src": "611:5:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 49,
+                            "name": "fileHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 25,
+                            "src": "618:8:0",
+                            "typeDescriptions":
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression":
+                        {
+                          "argumentTypes":
+                          [
+                            {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 44,
+                          "name": "logFileAddressStatus",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "567:20:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_function_event_nonpayable$_t_bool_$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                            "typeString": "function (bool,uint256,string memory,string memory)"
+                          }
+                        },
+                        "id": 50,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "567:60:0",
+                        "tryCall": false,
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_tuple$__$",
+                          "typeString": "tuple()"
+                        }
+                      },
+                      "id": 51,
+                      "nodeType": "EmitStatement",
+                      "src": "562:65:0"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "functionSelector": "e942b516",
+          "id": 64,
+          "implemented": true,
+          "kind": "function",
+          "modifiers": [],
+          "name": "set",
+          "nameLocation": "378:3:0",
+          "nodeType": "FunctionDefinition",
+          "parameters":
+          {
+            "id": 26,
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "constant": false,
+                "id": 23,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "396:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "382:19:0",
+                "stateVariable": false,
+                "storageLocation": "memory",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 22,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "382:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 25,
+                "mutability": "mutable",
+                "name": "fileHash",
+                "nameLocation": "417:8:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "403:22:0",
+                "stateVariable": false,
+                "storageLocation": "memory",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 24,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "403:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "src": "381:45:0"
+          },
+          "returnParameters":
+          {
+            "id": 27,
+            "nodeType": "ParameterList",
+            "parameters": [],
+            "src": "434:0:0"
+          },
+          "scope": 85,
+          "src": "369:371:0",
+          "stateMutability": "nonpayable",
+          "virtual": false,
+          "visibility": "public"
+        },
+        {
+          "body":
+          {
+            "id": 83,
+            "nodeType": "Block",
+            "src": "841:74:0",
+            "statements":
+            [
+              {
+                "expression":
+                {
+                  "components":
+                  [
+                    {
+                      "expression":
+                      {
+                        "baseExpression":
+                        {
+                          "id": 73,
+                          "name": "files",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11,
+                          "src": "859:5:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+                            "typeString": "mapping(string memory => struct Proof.FileDetails storage ref)"
+                          }
+                        },
+                        "id": 75,
+                        "indexExpression":
+                        {
+                          "id": 74,
+                          "name": "fileHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 66,
+                          "src": "865:8:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "859:15:0",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_struct$_FileDetails_$6_storage",
+                          "typeString": "struct Proof.FileDetails storage ref"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3,
+                      "src": "859:25:0",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    {
+                      "expression":
+                      {
+                        "baseExpression":
+                        {
+                          "id": 77,
+                          "name": "files",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11,
+                          "src": "886:5:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_FileDetails_$6_storage_$",
+                            "typeString": "mapping(string memory => struct Proof.FileDetails storage ref)"
+                          }
+                        },
+                        "id": 79,
+                        "indexExpression":
+                        {
+                          "id": 78,
+                          "name": "fileHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 66,
+                          "src": "892:8:0",
+                          "typeDescriptions":
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "886:15:0",
+                        "typeDescriptions":
+                        {
+                          "typeIdentifier": "t_struct$_FileDetails_$6_storage",
+                          "typeString": "struct Proof.FileDetails storage ref"
+                        }
+                      },
+                      "id": 80,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5,
+                      "src": "886:21:0",
+                      "typeDescriptions":
+                      {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    }
+                  ],
+                  "id": 81,
+                  "isConstant": false,
+                  "isInlineArray": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "nodeType": "TupleExpression",
+                  "src": "858:50:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_tuple$_t_uint256_$_t_string_storage_$",
+                    "typeString": "tuple(uint256,string storage ref)"
+                  }
+                },
+                "functionReturnParameters": 72,
+                "id": 82,
+                "nodeType": "Return",
+                "src": "851:57:0"
+              }
+            ]
+          },
+          "functionSelector": "693ec85e",
+          "id": 84,
+          "implemented": true,
+          "kind": "function",
+          "modifiers": [],
+          "name": "get",
+          "nameLocation": "755:3:0",
+          "nodeType": "FunctionDefinition",
+          "parameters":
+          {
+            "id": 67,
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "constant": false,
+                "id": 66,
+                "mutability": "mutable",
+                "name": "fileHash",
+                "nameLocation": "773:8:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 84,
+                "src": "759:22:0",
+                "stateVariable": false,
+                "storageLocation": "memory",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 65,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "759:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "src": "758:24:0"
+          },
+          "returnParameters":
+          {
+            "id": 72,
+            "nodeType": "ParameterList",
+            "parameters":
+            [
+              {
+                "constant": false,
+                "id": 69,
+                "mutability": "mutable",
+                "name": "timestamp",
+                "nameLocation": "809:9:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 84,
+                "src": "804:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName":
+                {
+                  "id": 68,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "804:4:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 71,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "834:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 84,
+                "src": "820:19:0",
+                "stateVariable": false,
+                "storageLocation": "memory",
+                "typeDescriptions":
+                {
+                  "typeIdentifier": "t_string_memory_ptr",
+                  "typeString": "string"
+                },
+                "typeName":
+                {
+                  "id": 70,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "820:6:0",
+                  "typeDescriptions":
+                  {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "src": "803:37:0"
+          },
+          "scope": 85,
+          "src": "746:169:0",
+          "stateMutability": "view",
+          "virtual": false,
+          "visibility": "public"
+        }
+      ],
+      "scope": 86,
+      "src": "62:855:0",
+      "usedErrors": []
+    }
+  ],
+  "src": "36:882:0"
+}
