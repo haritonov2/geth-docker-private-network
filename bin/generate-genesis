@@ -1,5 +1,5 @@
 #!/bin/bash
-# The script Generates genesis block for a new main node.
+# The script generates a genesis block for nodes.
 
 echo Be sure to generate geth account firts: \"geth account new\".
 
