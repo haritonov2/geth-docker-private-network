@@ -1,15 +1,22 @@
 #!/bin/bash
 # The script Generates genesis block for a new main node.
 
-echo Be sure to generate geth account firts: \"geth account new\"
+echo Be sure to generate geth account firts: \"geth account new\".
 
-# TODO: get keystore path from an ENV var
-keystore_path="/Users/sashah/Library/Ethereum/keystore"
 alloc_balances=""
 genesis_template_file="$(dirname $0)/../genesis-template.json"
 
+# Export variables from ".env" file.
+export $(grep -v '^#' "$(dirname $0)/../.env" | xargs)
+
+if [ -z $ETH_KEYSTORE_DIR ];
+then
+  echo You should define \"ETH_KEYSTORE_DIR\" environment variable.
+  exit 1
+fi
+
 # Loop over all Ethereum accounts.
-for account_file in "${keystore_path}/*"; do
+for account_file in ${ETH_KEYSTORE_DIR}/*; do
   account="$(cat $account_file)"
   pattern='address":"([a-zA-Z0-9]+)"'
 
@@ -18,14 +25,13 @@ for account_file in "${keystore_path}/*"; do
 
   if [[ $alloc_balances != "" ]]
   then
-    alloc_balances+=","
+    alloc_balances+=", "
   fi
 
   # Prepare balances allocation for all Ethereum accounts.
   alloc_balances+="\"0x${BASH_REMATCH[1]}\": { \"balance\": \"100000000000000000000000000000\" }"
 done;
 
-# Add Ethereum balances to a genesis block body.
 genesis="$(sed "s/\"alloc\": {}/\"alloc\": { $alloc_balances }/" $genesis_template_file)"
 
 echo $genesis > "$(dirname $0)/../genesis.json"
