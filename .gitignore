@@ -1,1 +1,13 @@
+# Ignore environment config.
 .env
+
+# Ignore IDE config.
+.idea
+.pryrc
+
+# Visual Studio Code
+/.vscode
+
+# Ignore all logfiles and tempfiles.
+.DS_Store
+*.log
