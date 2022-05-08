@@ -1,0 +1,25 @@
+#!/bin/bash
+# The script Generates genesis block for a new main node.
+
+echo Be sure to generate geth account firts: \"geth account new\"
+
+# TODO: get keystore path from an ENV var
+keystore_path="/Users/sashah/Library/Ethereum/keystore"
+alloc_balances=""
+
+# Loop over all Ethereum accounts.
+for account_file in "${keystore_path}/*"; do
+  account="$(cat $account_file)"
+  pattern='address":"([a-zA-Z0-9]+)"'
+
+  # Continue if an account doesn't have an address.
+  [[ $account =~ $pattern ]] || continue
+
+  if [[ $alloc_balances != "" ]]
+  then
+    alloc_balances+=","
+  fi
+
+  # Prepare balances allocation for all Ethereum accounts.
+  alloc_balances+="\"0x${BASH_REMATCH[1]}\": {\"balance\": \"100000000000000000000000000000\"}"
+done;
