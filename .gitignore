@@ -5,9 +5,12 @@
 .idea
 .pryrc
 
-# Visual Studio Code
+# Visual Studio Code.
 /.vscode
 
 # Ignore all logfiles and tempfiles.
 .DS_Store
 *.log
+
+# Generated files.
+genesis.json
