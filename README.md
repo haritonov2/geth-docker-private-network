@@ -1,15 +1,25 @@
 # Geth private network setup with Docker.
-
 Docker compose creates a private network with initial balances 
 populated for all provided Ethereum accounts from a keystore directory.
 
-## Environment variables.
+## 1. Environment variables.
+* Create `.env` file in the root folder
+* Copy and past a content of `.env-example` file to `.env`
+* Set environment variables
 
-Rename `.env-example` to `.env` and update all required variables.
+## 1. Generate Ethereum accounts (keystore).
+Initial balance will be allocated for all account keys in `./keystore` directory.
 
+A key can be generated with `Go Ethereum`.
+
+```bash
+docker run --entrypoint="" \
+  -v "[ABSOLUTE-PATH]/geth-docker-private-network/:/node/keystore" \
+  -it ethereum/client-go:stable \
+  geth account new --datadir /node/keystore
 ```
-ETH_KEYSTORE_DIR=./keystore/EXAMPLE--UTC--2022-05-08T20-57-17.198504212Z--945d7382e49bb85e5eecb1c43a82686cbf3797ef
-```
 
-By default `ETH_KEYSTORE_DIR` variable is set to a previously generate Ethereum account. Any other accounts 
-can be used by providing a path to Ethereum keystore directory.
+## 2. Run a private network.
+```bash
+docker compose up
+```
