@@ -1,22 +1,21 @@
 #!/bin/bash
 # The script generates a genesis block for nodes.
 
-echo Be sure to generate geth account firts: \"geth account new\".
-
 alloc_balances=""
+genesis_file_name="genesis.json"
 genesis_template_file="$(dirname $0)/../genesis-template.json"
 
 # Export variables from ".env" file.
 export $(grep -v '^#' "$(dirname $0)/../.env" | xargs)
 
-if [ -z $ETH_KEYSTORE_DIR ];
+if [ -z $KEYSTORE_ABSOLUTE_PATH ];
 then
-  echo You should define \"ETH_KEYSTORE_DIR\" environment variable.
+  echo You should define \"KEYSTORE_ABSOLUTE_PATH\" environment variable.
   exit 1
 fi
 
 # Loop over all Ethereum accounts.
-for account_file in ${ETH_KEYSTORE_DIR}/*; do
+for account_file in ${KEYSTORE_ABSOLUTE_PATH}/keystore/*; do
   account="$(cat $account_file)"
   pattern='address":"([a-zA-Z0-9]+)"'
 
@@ -34,4 +33,6 @@ done;
 
 genesis="$(sed "s/\"alloc\": {}/\"alloc\": { $alloc_balances }/" $genesis_template_file)"
 
-echo $genesis > "$(dirname $0)/../genesis.json"
+echo $genesis > "$(dirname $0)/../${genesis_file_name}"
+
+echo "RESULT: \"${genesis_file_name}\" has been added to the root folder."
