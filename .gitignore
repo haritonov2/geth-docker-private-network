@@ -14,3 +14,8 @@
 
 # Generated files.
 genesis.json
+
+# Keystore directory except an example account/key.
+keystore/*
+!keystore/EXAMPLE--UTC--2022-05-08T20-57-17.198504212Z--945d7382e49bb85e5eecb1c43a82686cbf3797ef
+
