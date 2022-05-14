@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  node:
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+      - /node/keystore:./keystore
+    ports:
+      - 8545-8585:8545
+    command:
+      - geth --datadir /var/geth-node --networkid 1234 --ws # default port is 8545
+#  leveldb:
+#    depends_on:
+#      - node1
+#    volumes:
+#      - ./datadirs/node1:/var/geth-nodes/node1
+
